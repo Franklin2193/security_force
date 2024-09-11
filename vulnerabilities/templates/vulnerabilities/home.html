@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Vulnerabilidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la API de Vulnerabilidades</h1>
+        <p>Seleccione una opción:</p>
+        <a href="{% url 'vulnerability-list' %}" class="btn">Ver Vulnerabilidades</a>
+        <a href="{% url 'add-fixed-vulnerabilities' %}" class="btn">Marcar Vulnerabilidades como Fixed</a>
+        <a href="{% url 'active-vulnerabilities' %}" class="btn">Ver Vulnerabilidades Activas</a>
+        <a href="{% url 'vulnerability-summary' %}" class="btn">Resumen de Vulnerabilidades</a>
+    </div>
+</body>
+</html>
