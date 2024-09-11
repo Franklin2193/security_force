@@ -87,14 +87,14 @@ DATABASES = {
     }
 }
 
-# Django REST Framework settings
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20  # Número de registros por página
 }
 
 
-# settings.py
+
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',

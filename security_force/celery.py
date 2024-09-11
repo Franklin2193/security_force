@@ -12,10 +12,10 @@ app = Celery('security_force')
 # Carga configuraciones de Celery desde el archivo de configuración de Django
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
-# Descubre tareas en todos los módulos de tareas de Django
+
 app.autodiscover_tasks()
 
-# Opcional: configuración de Celery Beat para tareas periódicas
+
 from celery.schedules import crontab
 
 app.conf.beat_schedule = {
